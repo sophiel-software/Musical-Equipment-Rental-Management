@@ -19,9 +19,19 @@ public class Booking {
     @ManyToOne
     private Equipment equipment;
 
-	public Booking(LocalDate startDate2, LocalDate endDate2, Equipment equipment2) {
-		
+	public Booking(LocalDate startDate, LocalDate endDate, Equipment equipment) {
+		this.startDate = startDate;
+        this.endDate = endDate;
+        this.equipment = equipment;
 	}
+	
+	
+
+	public Booking() {
+		super();
+	}
+
+
 
 	public Long getId() {
 		return id;
@@ -54,6 +64,14 @@ public class Booking {
 	public void setEquipment(Equipment equipment) {
 		this.equipment = equipment;
 	}
+
+	@Override
+	public String toString() {
+		return "Booking [id=" + id + ", startDate=" + startDate + ", endDate=" + endDate + ", equipment=" + equipment
+				+ "]";
+	}
+	
+	
 
 
 }

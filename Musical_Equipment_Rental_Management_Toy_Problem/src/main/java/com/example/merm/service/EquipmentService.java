@@ -9,6 +9,8 @@ import org.springframework.stereotype.Service;
 import com.example.merm.entity.Equipment;
 import com.example.merm.repository.EquipmentRepository;
 
+import jakarta.transaction.Transactional;
+
 @Service
 public class EquipmentService {
 
@@ -19,6 +21,7 @@ public class EquipmentService {
         return equipmentRepository.findAll();
     }
 
+    @Transactional
     public Equipment save(Equipment equipment) {
         return equipmentRepository.save(equipment);
     }

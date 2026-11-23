@@ -8,7 +8,15 @@ import java.util.Set;
 
 @Entity
 public class Equipment {
-    @Id
+	
+    public Equipment(Long id, String name, String description) {
+		super();
+		this.id = id;
+		this.name = name;
+		this.description = description;
+	}
+    
+	@Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
@@ -34,6 +42,11 @@ public class Equipment {
 	public void setDescription(String description) {
 		this.description = description;
 	}
+	@Override
+	public String toString() {
+		return "Equipment [id=" + id + ", name=" + name + ", description=" + description + "]";
+	}
 
+	
 
 }
