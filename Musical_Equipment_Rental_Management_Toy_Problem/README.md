@@ -13,4 +13,4 @@ Procedure:
 
 7 - Test cases pass, needed to add a proper mock for DB save call.
 
-Pending - UI integration not implemented.
+Pending - UI integration not implemented. Authorization for POST requests not implemented.
